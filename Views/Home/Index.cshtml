@@ -1,0 +1,11 @@
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+@model HomeViewModel
+
+<section>
+    <h2 class="main-page">It's your forum!</h2>
+</section>
+
+<partial name="_AlertPartial" model="@Model.Alert" />

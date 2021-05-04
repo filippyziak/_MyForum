@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+@model MainViewModel
+
+<div class="container text-center text-xs-center">
+    <div class="row">
+        <div class="col">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 text-center">
+        <a asp-controller="Main" asp-action="Create" class="btn btn-primary">Create Post</a>
+    </div>
+</div>
+
+<partial name="_AlertPartial" model="@Model.Alert"/>

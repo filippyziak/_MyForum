@@ -1,0 +1,15 @@
+@model ChangeEmailViewModel
+
+<form asp-action="ChangeEmail" asp-controller="Profile" method="POST"
+    class="d-flex flex-column justify-content-center w-100 mx-auto border rounded p-3 mb-3">
+    <h3>Change email</h3>
+
+    <div class="form-group">
+        <label asp-for="NewEmail">New email address</label>
+        <input class="form-control" type="email" asp-for="NewEmail" placeholder="New email address..." />
+        <span asp-validation-for="NewEmail" class="text-danger"></span>
+    </div>
+    <div class="col text-center">
+        <button type="submit" class="btn btn-primary w-50 ">Change email</button>
+    </div>
+</form>

@@ -1,0 +1,30 @@
+@using MyForum.Core.Extensions;
+
+@if (Context.IsLoggedIn())
+{
+    <div class="collapse navbar-collapse" id="navigation-bar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
+            <li class="nav-item"><a asp-controller="Profile" asp-action="Index" class="nav-link">Profile</a></li>
+            <li class="nav-item"><a asp-controller="Category" asp-action="Index" class="nav-link">Categories</a></li>
+            <li class="nav-item"><a asp-controller="Main" asp-action="Create" class="nav-link">Create</a></li>
+            <li class="nav-item">
+                <form asp-controller="Auth" asp-action="Logout" class="form-inline">
+                    <button class="btn btn-link btn-small like-link" type="submit">Logout</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+}
+
+else
+{
+    <div class="collapse navbar-collapse" id="navigation-bar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a asp-controller="Auth" asp-action="Login" class="nav-link">Login</a></li>
+            <li class="nav-item"><a asp-controller="Auth" asp-action="Register" class="nav-link">Register</a></li>
+            <li class="nav-item"><a asp-controller="Auth" asp-action="ResetPassword" class="nav-link">Reset Password</a>
+            </li>
+        </ul>
+    </div>
+}

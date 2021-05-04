@@ -1,0 +1,31 @@
+@{
+    string alertTypeClass = string.Empty;
+
+    switch (Model?.Type)
+    {
+        case AlertType.Info:
+            alertTypeClass = "alert-info";
+            break;
+        case AlertType.Success:
+            alertTypeClass = "alert-success";
+            break;
+        case AlertType.Error:
+            alertTypeClass = "alert-danger";
+            break;
+        default:
+            alertTypeClass = "alert-info";
+            break;
+    }
+}
+
+@model Alert
+
+@if (Model?.Message != null)
+{
+    <div id="alert" class="alert @alertTypeClass alert-dismissible fade show" role="alert">
+        @Model.Message
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}

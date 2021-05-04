@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+@model CreatePostViewModel
+
+<section id="header">
+    <div class="container text-center text-xs-center">
+        <div class="row">
+            <div class="col">
+                <h2>Create Post!</h2>
+                <hr class="w-50">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-lg-5 mx-auto mt-2 text-center">
+            <form asp-action="Create">
+                <fieldset class="form-group"> <input type="text" asp-for="PostTitle" placeholder="Title..."
+                        class="form-control form-control-sm">
+                    <span class="text-danger" asp-validation-for="PostTitle"></span>
+                </fieldset>
+                <fieldset class="form-group"> <select asp-for="CategoryId" placeholder="Category..."
+                        class="form-control form-control-sm">
+                        @foreach (var category in Model.CategoriesToSelect)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+                        }
+                    </select>
+                </fieldset>
+                <fieldset class="form-group"> <textarea type="text" asp-for="Content" placeholder="Content..."
+                        class="form-control form-control-sm"></textarea>
+                    <span class="text-danger" asp-validation-for="Content"></span>
+                </fieldset>
+                <button type="submit" class="btn btn-outline-primary btn-block">Create Post</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<partial name="_AlertPartial" model="@Model.Alert"/>

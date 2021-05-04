@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+@model ProfileViewModel
+<section id="header" class="pt-3">
+    <div class="container text-center text-xs-center">
+        <div class="row">
+            <div class="col">
+                <h2>Your Profile!</h2>
+                <hr class="w-50">
+            </div>
+        </div>
+    </div>
+    <div class="container my-1">
+        <div class="row text-center">
+            <div class="col-md-5 border rounded mx-auto p-1">
+                <dt>Username</dt>
+                <dd>@Model.Username</dd>
+            </div>
+            <div class="col-md-5 border rounded mx-auto p-1">
+                <dt>Email address</dt>
+                <dd>@Model.Email</dd>
+            </div>
+
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-6">
+                @await Component.InvokeAsync("ChangeEmail", new { viewModel = new ChangeEmailViewModel()})
+            </div>
+            <div class="col-md-6">
+                @await Component.InvokeAsync("ChangePassword", new {viewModel = new ChangePasswordViewModel() })
+            </div>
+        </div>
+    </div>
+</section>
+<partial name="_AlertPartial" model="@Model.Alert" />

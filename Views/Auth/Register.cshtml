@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = Model.Title;
+}
+@model RegisterViewModel
+<section id="header">
+    <div class="container text-center text-xs-center">
+        <div class="row">
+            <div class="col">
+                <h2>Sign up to YourForum!</h2>
+                <hr class="w-50">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-lg-5 mx-auto mt-2 text-center">
+            <form asp-action="Register">
+                <fieldset class="form-group"> <input type="email" asp-for="Email" placeholder="Email..."
+                        class="form-control form-control-sm">
+                    <span class="text-danger" asp-validation-for="Email"></span>
+                </fieldset>
+                <fieldset class="form-group"> <input type="text" asp-for="Username" placeholder="Username..."
+                        class="form-control form-control-sm">
+                    <span class="text-danger" asp-validation-for="Username"></span>
+                </fieldset>
+                <fieldset class="form-group"> <input type="password" asp-for="Password" placeholder="Password..."
+                        class="form-control form-control-sm">
+                    <span class="text-danger" asp-validation-for="Password"></span>
+                </fieldset>
+                <button type="submit" class="btn btn-outline-primary btn-block">Register</button>
+            </form>
+            <p>Already a user? <a asp-action="Login">Login!</a></p>
+        </div>
+    </div>
+</section>
+
+<partial name="_AlertPartial" model="@Model.Alert"/>

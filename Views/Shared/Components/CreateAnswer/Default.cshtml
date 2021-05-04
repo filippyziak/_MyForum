@@ -1,0 +1,14 @@
+@model CreateAnswerViewModel
+
+<form asp-action="CreateAnswer" asp-controller="Post" method="POST"
+    class="d-flex flex-column justify-content-center w-100 mx-auto border rounded p-3 mb-3">
+    <fieldset class="form-group"> <textarea type="text" asp-for="Content" placeholder="Content..."
+            class="form-control form-control-sm"></textarea>
+        <span class="text-danger" asp-validation-for="Content"></span>
+    </fieldset>
+    <fieldset class="form-group"> <input type="hidden" asp-for=@Model.PostId />
+    </fieldset>
+    <div class="col text-center">
+        <button type="submit" class="btn btn-primary w-50 ">Create</button>
+    </div>
+</form>
