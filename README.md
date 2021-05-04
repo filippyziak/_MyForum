@@ -5,19 +5,19 @@
   
 ## Specifications
 
-Technology: ASP NET CORE 3.1 MVC
+**Technology:** ASP NET CORE 3.1 MVC
 
-Database: PostgreSQL
+**Database:** PostgreSQL
 
-Frameworks and libraries: EF CORE, AutoMapper, SendGrid
+**Frameworks and libraries:** EF CORE, AutoMapper, SendGrid
 
 ## Pictures
 
-Database schema:
+**Database schema:**
 
 ![Zrzut ekranu 2021-04-27 145519](https://user-images.githubusercontent.com/56251114/117057549-de4a4c00-ad1d-11eb-9f90-5be3b2b5aab0.png)
 
-Application:
+**Application:**
 
 ![Zrzut ekranu 2021-04-27 142538](https://user-images.githubusercontent.com/56251114/117057767-236e7e00-ad1e-11eb-93d7-49d5ade5d12d.png)
 ![Zrzut ekranu 2021-04-27 142725](https://user-images.githubusercontent.com/56251114/117057770-24071480-ad1e-11eb-8230-9bd71cb253ee.png)
