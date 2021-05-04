@@ -6,7 +6,9 @@
 ## Specifications
 
 Technology: ASP NET CORE 3.1 MVC
+
 Database: PostgreSQL
+
 Frameworks and libraries: EF CORE, AutoMapper, SendGrid
 
 ## Pictures
